@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #141414;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.wrap {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  padding: 30px 0;
+}
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .wrap .brand h2 {
+  font-family: "Bebas Neue", cursive;
+  color: #E50914;
+  font-weight: normal;
+  font-size: 30px;
+}
+header .wrap .brand h2 span {
+  font-size: 40px;
+}
+header .wrap nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 20px;
+}
+header .wrap nav a:hover, header .wrap nav a.active {
+  color: #fff;
+}
+
+.primary-movie {
+  font-size: 16px;
+  min-height: 48.62em;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/backdrop.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+.primary-movie .wrap {
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+.primary-movie .wrap .title {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+.primary-movie .wrap .description {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+.primary-movie .wrap .btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  font-size: 1.12em;
+  transition: 0.3s ease all;
+}
+.primary-movie .wrap .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.primary-movie .wrap .btn i {
+  margin-right: 1.25em;
+}
+
+.rec-anime {
+  margin-bottom: 4.375em;
+}
+.rec-anime .container-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.rec-anime .container-controls h3 {
+  color: #fff;
+  font-size: 1.8em;
+}
+.rec-anime .container-controls .indicator button {
+  background: #fff;
+  height: 0.1875em;
+  width: 0.625em;
+  cursor: pointer;
+  border: none;
+  margin-right: 0.125em;
+}
+.rec-anime .container-controls .indicator button:hover {
+  background: #E50914;
+}
+.rec-anime .container-controls .indicator .active {
+  background: #E50914;
+}
+.rec-anime .first-container {
+  display: flex;
+  position: relative;
+}
+.rec-anime .first-container .arrow-left, .rec-anime .first-container .arrow-right {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2.5em;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 2.5em;
+  width: 1.125em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+}
+.rec-anime .first-container .arrow-left:hover, .rec-anime .first-container .arrow-right:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.rec-anime .first-container .arrow-left {
+  left: 0;
+}
+.rec-anime .first-container .arrow-right {
+  right: 0;
+}
+.rec-anime .first-container .carrousel-container {
+  width: 100%;
+  padding: 1.25em 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.rec-anime .first-container .carrousel-container .carrousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.rec-anime .first-container .carrousel-container .carrousel .movie {
+  min-width: 20%;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.rec-anime .first-container .carrousel-container .carrousel .movie img {
+  width: 100%;
+  vertical-align: top;
+}
+.rec-anime .first-container .carrousel-container .carrousel .hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+@media screen and (max-width: 800px) {
+  header .brand {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  header .wrap {
+    flex-direction: column;
+  }
+
+  .primary-movie {
+    font-size: 14px;
+  }
+  .primary-movie .wrap .description {
+    max-width: 100%;
+  }
+
+  .rec-anime .carrousel-container {
+    overflow: visible !important;
+  }
+  .rec-anime .carrousel-container .carrousel {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px;
+  }
+  .rec-anime .container-controls {
+    display: none !important;
+  }
+  .rec-anime .first-container .arrow-left, .rec-anime .first-container .arrow-right {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

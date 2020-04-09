@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix clone - Made by Luis Fructuoso</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="head">
+      <div class="wrap">
+        <div class="brand">
+          <h2><span class="n">A</span>nimetflix</h2>
+        </div>
+        <nav class="menu">
+          <a class="active" href="#">Inicio</a>
+          <a href="#">Programas</a>
+          <a href="#">Peliculas</a>
+          <a href="#">Mas recientes</a>
+          <a href="#">Mi lista</a>
+        </nav>
+      </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Start Main -->
+    <main>
+      <div class="primary-movie">
+        <div class="wrap">
+          <h3 class="title">interestellar</h3>
+          <p class="description">
+            Narra las aventuras de un grupo de exploradores que hacen uso de un
+            agujero de gusano recientemente descubierto para superar las
+            limitaciones de los viajes espaciales tripulados y vencer las
+            inmensas distancias que tiene un viaje interestelar.
+          </p>
+          <button role="button" class="btn">
+            <i class="fas fa-play"></i> Reproducir
+          </button>
+          <button role="button" class="btn">
+            <i class="fas fa-info-circle"></i> Mas informacion
+          </button>
+        </div>
+      </div>
+
+      <div class="wrap rec-anime">
+        <div class="container-controls">
+          <h3>Peliculas recomendados</h3>
+          <div class="indicator">
+            <!-- Los generaremos con javascript -->
+          </div>
+        </div>
+
+        <div class="first-container">
+          <button role="button" id="arrow-left" class="arrow-left">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="carrousel-container">
+            <div class="carrousel">
+              <div class="movie">
+                <a href="#"><img src="img/1.png" alt="movie1"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/2.png" alt="movie2"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/3.png" alt="movie3"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/4.png" alt="movie4"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/5.png" alt="movie5"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/6.png" alt="movie6"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/7.png" alt="movie7"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/1.png" alt="movie1"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/2.png" alt="movie2"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/3.png" alt="movie3"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/1.png" alt="movie1"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/2.png" alt="movie2"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/3.png" alt="movie3"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/4.png" alt="movie4"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/5.png" alt="movie5"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/6.png" alt="movie6"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/7.png" alt="movie7"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/1.png" alt="movie1"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/2.png" alt="movie2"></a>
+              </div>
+              <div class="movie">
+                <a href="#"><img src="img/3.png" alt="movie3"></a>
+              </div>
+            </div>
+          </div>
+
+          <button role="button" id="arrow-right" class="arrow-right">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+
+    <script
+      src="https://kit.fontawesome.com/c409bf16ba.js"
+      crossorigin="anonymous"
+      SameSite=Secure
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

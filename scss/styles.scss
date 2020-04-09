@@ -1,0 +1,225 @@
+
+$primary-color: #E50914;
+$bg-color: #141414;
+$font-stack1: 'Bebas Neue', cursive;
+$font-stack2: 'Open Sans', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $bg-color;
+    font-family: $font-stack2;
+    font-size: 16px;
+}
+
+.wrap{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brand{
+            h2{
+                font-family: $font-stack1;
+                color: $primary-color;
+                font-weight: normal;
+                font-size: 30px;
+                span{
+                    font-size: 40px;
+                }
+            }
+        }
+        nav{
+            a{
+                color: #aaa;
+                text-decoration: none;
+                margin-right: 20px;
+                &:hover, 
+                &.active{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// Primary movie styles
+
+.primary-movie{
+    font-size: 16px;
+    min-height: 48.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/backdrop.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    .wrap{
+        margin: 0 auto;
+        margin-bottom: 6.25em;
+        .title{
+            font-weight: 600;
+            font-size: 3.12em;
+            margin-bottom: 0.4em;
+        }
+        .description{
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 1.75em;
+            max-width: 50%;
+            margin-bottom: 1.25em;
+        }
+        .btn{
+            background: rgba(0, 0, 0, .50);
+            border: none;
+            border-radius: 0.31em;
+            padding: 0.93em 1.87em;
+            color: #fff;
+            margin-right: 1.25em;
+            cursor: pointer;
+            font-size: 1.12em;
+            transition: .3s ease all;
+            &:hover{
+                background: #fff;
+                color: #000;
+            }
+            i{
+                margin-right: 1.25em;
+            }
+        }
+    }
+}
+
+.rec-anime{
+    margin-bottom: 4.375em;
+    // Title and Controls
+    .container-controls{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h3{
+            color: #fff;
+            font-size: 1.8em;
+        }
+        .indicator{
+            button{
+                background: #fff;
+                height: 0.1875em;
+                width: 0.625em;
+                cursor: pointer;
+                border: none;
+                margin-right: 0.125em;
+                &:hover{
+                    background: $primary-color;
+                }
+            }
+            .active{
+                background: $primary-color;
+            }
+        }
+    }
+    // container general
+    .first-container{
+        display: flex;
+        position: relative;
+        .arrow-left,.arrow-right{
+            position: absolute;
+            border: none;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 2.5em;
+            height: 50%;
+            top: calc(50% - 25%);
+            line-height: 2.5em;
+            width: 1.125em;
+            color: #fff;
+            cursor: pointer;
+            z-index: 500;
+            &:hover{
+                background: rgba(0, 0, 0, .9);
+            }
+        }
+        .arrow-left{
+            left: 0;
+        }
+        .arrow-right{
+            right: 0;
+        }
+        .carrousel-container{
+            width: 100%;
+            padding: 1.25em 0;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            .carrousel{
+                display: flex;
+                flex-wrap: nowrap;
+                .movie{
+                    min-width: 20%;
+                    transition: all .3s ease;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, .30);
+                    img{
+                        width: 100%;
+                        vertical-align: top;
+                    }
+                }
+                .hover{
+                    transform: scale(1.2);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+}
+
+
+// Media queries
+
+@media screen and (max-width: 800px){
+    header{
+        .brand{
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .wrap{
+            flex-direction: column;
+        }
+    }
+    
+    .primary-movie{
+        font-size: 14px;
+        .wrap{
+            .description{
+                max-width: 100%;
+            }
+        }
+    }
+
+    .rec-anime{
+        .carrousel-container{
+            overflow: visible !important;
+            .carrousel{
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 20px;
+            }
+        }
+        .container-controls{
+            display: none !important;
+        }
+        .first-container{
+            .arrow-left, .arrow-right{
+                display: none !important;
+            }
+        }
+    }
+}
